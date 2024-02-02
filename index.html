@@ -16,6 +16,85 @@
     <title>Notes</title>
 </head>
 <body>
+    <!--Beginning of page 1-->    
+
+    <div data-role="page" id="home">
+        <div data-role="header">
+          <h1>Habit Tracker</h1>
+        </div>
     
+        <div data-role="content">
+          <p>Welcome to Habit Tracker! This app helps you build and track your daily habits.</p>
+        </div>
+    
+        <div data-role="footer" data-position="fixed">
+          <div data-role="navbar">
+            <ul>
+              <li><a href="#addHabit" data-icon="plus">Add Habit</a></li>
+              <li><a href="#viewHabits" data-icon="bars">View Habits</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+
+      <!---Beginning of page 2-->
+      <div data-role="page" id="addHabit">
+        <div data-role="header">
+          <h1>Add Habit</h1>
+        </div>
+      
+        <div data-role="content">
+          <form>
+            <label for="habitName">Habit Name:</label>
+            <input type="text" id="habitName" placeholder="Enter habit name">
+      
+            <label for="category">Category:</label>
+            <select id="category" data-native-menu="false">
+              <option>Select Category</option>
+              <option value="health">Health</option>
+              <option value="fitness">Fitness</option>
+              <option value="productivity">Productivity</option>
+            </select>
+      
+            <button type="submit" data-icon="check">Add Habit</button>
+          </form>
+        </div>
+      
+        <div data-role="footer" data-position="fixed">
+          <div data-role="navbar">
+            <ul>
+              <li><a href="#home" data-icon="home">Home</a></li>
+              <li><a href="#viewHabits" data-icon="bars">View Habits</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      
+      <!--Beginning of page 3-->
+      <div data-role="page" id="viewHabits">
+        <div data-role="header">
+          <h1>View Habits</h1>
+        </div>
+      
+        <div data-role="content">
+          <ul data-role="listview">
+            <!-- List of habits will be dynamically generated here -->
+          </ul>
+        </div>
+      
+        <div data-role="footer" data-position="fixed">
+          <div data-role="navbar">
+            <ul>
+              <li><a href="#home" data-icon="home">Home</a></li>
+              <li><a href="#addHabit" data-icon="plus">Add Habit</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+
+
+
 </body>
 </html>
