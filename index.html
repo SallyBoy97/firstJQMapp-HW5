@@ -18,7 +18,7 @@
 <body>
     <!--Beginning of page 1-->    
 
-    <div data-role="page" id="home">
+    <div data-role="page" id="home" data-theme="b">
         <div data-role="header">
           <h1>Habit Tracker</h1>
         </div>
@@ -38,13 +38,13 @@
       </div>
 
 
-      <!---Beginning of page 2-->
-      <div data-role="page" id="addHabit">
+      <!---Beginning of page 2 ADD HABIT-->
+      <div data-role="page" id="addHabit" data-theme="b">
         <div data-role="header">
           <h1>Add Habit</h1>
         </div>
       
-        <div data-role="content">
+        <div data-role="content" date-theme="b">
           <form>
             <label for="habitName">Habit Name:</label>
             <input type="text" id="habitName" placeholder="Enter habit name">
@@ -55,6 +55,27 @@
               <option value="health">Health</option>
               <option value="fitness">Fitness</option>
               <option value="productivity">Productivity</option>
+            </select>
+      
+            <label for="days">Select Days:</label>
+            <select id="days" data-native-menu="false">
+              <option>Select Days</option>
+              <option value="M">Monday</option>
+              <option value="T">Tuesday</option>
+              <option value="W">Wednesday</option>
+              <option value="Th">Thursday</option>
+              <option value="F">Friday</option>
+              <option value="S">Saturday</option>
+              <option value="Sun">Sunday</option>
+            </select>
+      
+            <label for="timeOfDay">Select Time of Day:</label>
+            <select id="timeOfDay" data-native-menu="false">
+              <option>Select Time</option>
+              <option value="morning">Morning</option>
+              <option value="afternoon">Afternoon</option>
+              <option value="evening">Evening</option>
+              <option value="night">Night</option>
             </select>
       
             <button type="submit" data-icon="check">Add Habit</button>
@@ -71,8 +92,8 @@
         </div>
       </div>
       
-      <!--Beginning of page 3-->
-      <div data-role="page" id="viewHabits">
+      <!--Beginning of page 3 VIEW HABIT-->
+      <div data-role="page" id="viewHabits" data-theme="b">
         <div data-role="header">
           <h1>View Habits</h1>
         </div>
