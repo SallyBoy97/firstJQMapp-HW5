@@ -44,7 +44,7 @@
           <h1>Add Habit</h1>
         </div>
       
-        <div data-role="content" date-theme="b">
+        <div data-role="content" date-theme="b"> 
           <form>
             <label for="habitName">Habit Name:</label>
             <input type="text" id="habitName" placeholder="Enter habit name">
@@ -58,7 +58,7 @@
             </select>
       
             <label for="days">Select Days:</label>
-            <select id="days" data-native-menu="false">
+            <select id="days" data-native-menu="false" multiple="multiple">
               <option>Select Days</option>
               <option value="M">Monday</option>
               <option value="T">Tuesday</option>
@@ -78,7 +78,7 @@
               <option value="night">Night</option>
             </select>
       
-            <button type="submit" data-icon="check">Add Habit</button>
+            <button type="submit" id="addButton" data-icon="check">Add Habit</button>
           </form>
         </div>
       
@@ -99,7 +99,7 @@
         </div>
       
         <div data-role="content">
-          <ul data-role="listview">
+          <ul id="oneUL" data-role="listview">
             <!-- List of habits will be dynamically generated here -->
           </ul>
         </div>
