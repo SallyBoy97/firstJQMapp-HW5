@@ -38,8 +38,8 @@ document.addEventListener("DOMContentLoaded", function (event) {
         
     })
 
-    document.getElementById("category").addEventListener("change", function () {
-       selectedCategory = document.getElementById("category").value;
+    document.getElementById("cate").addEventListener("change", function () {
+       selectedCategory = document.getElementById("cate").value;
     });
 
 });
