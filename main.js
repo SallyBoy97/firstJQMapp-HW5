@@ -15,10 +15,15 @@ let selectedCategory = "";
 
 document.addEventListener("DOMContentLoaded", function (event) {
 
-        habitList();
+
+    habitList();
 
     document.getElementById("addButton").addEventListener("click", function(){
-    
+    habitArray.push ( new Habit(document.getElementById("dataInput").value, selectedType,
+    document.getElementById("habitName").value ) );
+    document.getElementById("cate").value = "";
+    document.getElementById("days").value = "";
+    document.getElementById("timeOfDay").value = "";
 
         habitList();
 
@@ -37,7 +42,7 @@ function habitList() {
     var oneUL = document.getElementById("oneUL");
     oneUL.innerHTML = "";
 
-    NoteArray.forEach(function (habitArray,) {   // use handy array forEach method
+    habitArray.forEach(function (element,) {   // use handy array forEach method
            var li = document.createElement('li');
            // added data-role="listview" to the ul in the html
            li.innerHTML = habbitArray.name + "  " + habitArray.category + "   " + habbitArray.day + "   " + habbitArray.time;
