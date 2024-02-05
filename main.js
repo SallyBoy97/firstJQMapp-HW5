@@ -1,6 +1,7 @@
 
 let habitArray = [];
- 
+let selectedCategory = "";
+
 let Habit = function (name, category, day, time) { //habbit definitions instantiation
     this.name = name;
     this.category = category;
@@ -10,20 +11,27 @@ let Habit = function (name, category, day, time) { //habbit definitions instanti
 
 habitArray.push (new Habit("Take vitamins", "health", "monday","morning"));
 
-let selectedCategory = "";
 
 
 document.addEventListener("DOMContentLoaded", function (event) {
 
 
     habitList();
-
+    //add user input to array
     document.getElementById("addButton").addEventListener("click", function(){
-    habitArray.push ( new Habit(document.getElementById("dataInput").value, selectedType,
-    document.getElementById("habitName").value ) );
-    document.getElementById("cate").value = "";
-    document.getElementById("days").value = "";
-    document.getElementById("timeOfDay").value = "";
+        let habitName = document.getElementById("habitName").value;
+        let selectedType = document.getElementById("cate").value;
+        let selectedDay = document.getElementById("days").value;
+        let selectedTime = document.getElementById("timeOfDay").value;
+
+        habitArray.push(new Habit(habitName, selectedType, selectedDay, selectedTime));
+
+        //clear input fields after adding a habit
+        document.getElementById("habitName").value = "";
+        document.getElementById("cate").value = "";
+        document.getElementById("days").value = "";
+        document.getElementById("timeOfDay").value = "";
+
 
         habitList();
 
@@ -36,16 +44,16 @@ document.addEventListener("DOMContentLoaded", function (event) {
 
 });
 
-    // function defintions
+
+//function to display list
 function habitList() {
-    // clear prior data
+
     var oneUL = document.getElementById("oneUL");
     oneUL.innerHTML = "";
 
-    habitArray.forEach(function (element,) {   // use handy array forEach method
+    habitArray.forEach(function (habit) {   
            var li = document.createElement('li');
-           // added data-role="listview" to the ul in the html
-           li.innerHTML = habbitArray.name + "  " + habitArray.category + "   " + habbitArray.day + "   " + habbitArray.time;
+           li.innerHTML = habit.name + "  " + habit.category + "   " + habit.day + "   " + habit.time;
            oneUL.appendChild(li);
     });
 }; 
