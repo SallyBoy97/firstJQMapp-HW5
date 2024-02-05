@@ -19,19 +19,19 @@ document.addEventListener("DOMContentLoaded", function (event) {
     habitList();
 
     document.getElementById("addButton").addEventListener("click", function(){
-    habitArray.push ( new Habit(document.getElementById("dataInput").value, selectedType,
-    document.getElementById("habitName").value ) );
-    document.getElementById("cate").value = "";
-    document.getElementById("days").value = "";
-    document.getElementById("timeOfDay").value = "";
+        habitArray.push ( new Habit(document.getElementById("habitName").value, document.getElementById("cate").value,
+        document.getElementById("days").value, document.getElementById("timeOfDay").value ) );
+        document.getElementById("cate").value = "";
+        document.getElementById("days").value = "";
+        document.getElementById("timeOfDay").value = "";
 
         habitList();
 
         
     })
 
-    document.getElementById("category").addEventListener("change", function () {
-       selectedCategory = document.getElementById("category").value;
+    document.getElementById("cate").addEventListener("change", function () {
+       selectedCategory = document.getElementById("cate").value;
     });
 
 });
